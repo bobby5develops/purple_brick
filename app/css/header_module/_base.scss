@@ -1,0 +1,19 @@
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+/*  SECTIONS  */
+nav {
+    clear: both;
+    padding: 0;
+    margin: 0;
+
+    ul {
+        height: 104px;
+        margin: 0px;
+        border-bottom: 1.5px solid rgba(0,0,0, 0.3) ;
+        .navigation_bar{
+            background-color: #f1f2f2;
+        }
+    }
+}
