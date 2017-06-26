@@ -1,0 +1,24 @@
+/* ==========================================================================
+   Buyer's Details
+   ========================================================================== */
+@import "../mixins/fonts";
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:500');
+
+$font-family-header: 'Source Sans Pro', sans-serif;
+$font-weight-subheader: 300;
+
+
+
+.buyers_details {
+    border: 1px solid #800080;
+    h1{
+        float: left;
+    }
+    a{
+        float: right;
+    }
+    div.hide{
+
+    }
+
+}
