@@ -9,21 +9,18 @@ var purple = (function (window) {
         console.log(targetEl);
 
 
-    //event dispatchers
+
+
+    //event handlers
     var toggledItem = function() {
         var target = targetEl;
 
         if (target.style.display === 'block'){
-            target.className = 'animated fadeInDown';
            target.style.display = 'none';
-
-
 
         }else {
             target.style.display = 'block';
         }
-
-        //console.log('toggled Element fired!!!');
     };
 
     var ready = function () {

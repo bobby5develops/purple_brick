@@ -11,6 +11,9 @@ nav {
     ul {
         height: 104px;
         margin: 0px;
+        list-style-type: none;
+        padding: 0;
+        overflow: hidden;
         border-bottom: 1.5px solid rgba(0,0,0, 0.3) ;
         .navigation_bar{
             background-color: #f1f2f2;

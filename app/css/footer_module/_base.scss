@@ -1,0 +1,46 @@
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+@import "../mixins/fonts";
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:500');
+
+$font-family-header: 'Source Sans Pro', sans-serif;
+$font-weight-subheader: 300;
+
+
+
+footer {
+    background: #545353;
+    border-top: 1px solid #4b4a4a;
+    color: #333;
+    text-shadow: 1px 1px 0 rgba(255,255,255,0.6);
+    width: 100%;
+    height: 100px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover {
+        background-color: #111;
+    }
+
+}

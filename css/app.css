@@ -6,10 +6,15 @@
    ========================================================================== */
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:500");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:500");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:500");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:500");
 html {
   color: #222;
   font-size: 1em;
   line-height: 1.4; }
+
+html, body {
+  height: 100%; }
 
 /*
  * Remove text-shadow in selection highlight:
@@ -543,6 +548,9 @@ nav {
   nav ul {
     height: 104px;
     margin: 0px;
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
     border-bottom: 1.5px solid rgba(0, 0, 0, 0.3); }
     nav ul .navigation_bar {
       background-color: #f1f2f2; }
@@ -579,11 +587,11 @@ nav {
   font-style: normal; }
 
 /* Status Bar */
-.status_bar h1 {
+.status_bar h2 {
   background-color: #ff0000;
   color: #ffffff;
   font-family: "Source Sans Pro", sans-serif; }
-  .status_bar h1 span {
+  .status_bar h2 span {
     font-weight: 300; }
 
 .property {
@@ -632,7 +640,100 @@ nav {
     float: right; }
 
 /* ==========================================================================
-   Author's custom styles
+   Re-open Negotiations
+   ========================================================================== */
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icon-font';
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  speak: none;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+@font-face {
+  font-family: fontName;
+  font-weight: normal;
+  font-style: normal;
+  src: url("path/to/font.woff") format("woff"); }
+
+/*----*/
+@font-face {
+  font-family: SourceSansPro;
+  /*IE9 Compat Modes*/
+  src: url("https://fonts.googleapis.com/css?family=Source+Sans+Pro.eot");
+  /*IE6-IE8*/
+  src: url("https://fonts.googleapis.com/css?family=Source+Sans+Pro.eot?#iefix") format("embedded-opentype"), url("https://fonts.googleapis.com/css?family=Source+Sans+Pro.woff") format("woff"), url("https://fonts.googleapis.com/css?family=Source+Sans+Proe.ttf") format("truetype"), url("https://fonts.googleapis.com/css?family=Source+Sans+Pro.svg#SourceSansPro") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+.reopen_negotiations {
+  border: 1px solid #800080; }
+  .reopen_negotiations a {
+    float: right; }
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icon-font';
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  speak: none;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+@font-face {
+  font-family: fontName;
+  font-weight: normal;
+  font-style: normal;
+  src: url("path/to/font.woff") format("woff"); }
+
+/*----*/
+@font-face {
+  font-family: SourceSansPro;
+  /*IE9 Compat Modes*/
+  src: url("https://fonts.googleapis.com/css?family=Source+Sans+Pro.eot");
+  /*IE6-IE8*/
+  src: url("https://fonts.googleapis.com/css?family=Source+Sans+Pro.eot?#iefix") format("embedded-opentype"), url("https://fonts.googleapis.com/css?family=Source+Sans+Pro.woff") format("woff"), url("https://fonts.googleapis.com/css?family=Source+Sans+Proe.ttf") format("truetype"), url("https://fonts.googleapis.com/css?family=Source+Sans+Pro.svg#SourceSansPro") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+footer {
+  background: #545353;
+  border-top: 1px solid #4b4a4a;
+  color: #333;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.6);
+  width: 100%;
+  height: 100px;
+  position: relative;
+  bottom: 0;
+  left: 0; }
+  footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; }
+  footer li {
+    float: left; }
+  footer li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none; }
+  footer li a:hover {
+    background-color: #111; }
+
+/* ==========================================================================
+   Custom styles
    ========================================================================== */
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
