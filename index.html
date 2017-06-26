@@ -1,9 +1,9 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="eng">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>purple bricks: test</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -11,7 +11,6 @@
         <!-- Place favicon.ico in the root directory -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
         <link rel="stylesheet" href="css/app.css">
-        <script src="app/js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -65,10 +64,16 @@
                 <h2>Re-open negotiations</h2>
                 <p>Would you like your Expert, Robert White, to negotiate on your behalf? It’s completely free! <a href="#" class="negotiate_btn">NEGOTIATE FOR ME</a> </p>
 
-                <label for="offerNum">Enter an offer you would be willing to accept:</label>
-                <input id="offerNum" type="number" name="offerNum" value="180000">
+                <!--form-->
+                <form>
+                    <label for="offerNum">Enter an offer you would be willing to accept:</label>
+                    <input id="offerNum" type="number" name="offerNum" placeholder="180000" autofocus />
 
-                <a href="#">ADD COMMENTS</a>
+                    <a href="#">ADD COMMENTS</a>
+                    <!--submit offer-->
+                    <input type="submit" value="Submit Form">
+                    <span class="validity"></span>
+                </form>
 
             </div>
 
