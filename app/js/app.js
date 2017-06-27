@@ -111,11 +111,10 @@ var purple = (function (window) {
 
 
     //event listeners
-    function loadEvents() {
-        anchorEl.addEventListener("click", toggledItem, false);
-        submitOffer.addEventListener("click", validateOffer, false);
-        document.addEventListener("DOMContentLoaded", ready);
-    }
+
+    anchorEl.addEventListener("click", toggledItem, false);
+    submitOffer.addEventListener("click", validateOffer, false);
+    document.addEventListener("DOMContentLoaded", ready);
 
 
     /**
@@ -125,7 +124,8 @@ var purple = (function (window) {
 
     //api dispatcher
     return {
-        loadEvents: loadEvents
+        toggleItem: toggledItem,
+        validateOffer: validateOffer
     }
 
 }(window));
