@@ -6,14 +6,52 @@ var purple = (function (window) {
     //vars
     var anchorEl = document.querySelector("a"),
         targetEl = document.querySelectorAll('.hide')[0],
-        offer = document.querySelectorAll('input[type="number"]')[0].value,
-        submitOffer = document.querySelectorAll('input[type="submit"]')[0];
+        //offer = document.querySelectorAll('input[type="number"]')[0].value,
+        submitOffer = document.querySelectorAll('input[type="submit"]')[0],
+        parsedOffer;
 
 
     //utility helpers
+
+    /**
+     *
+     *
+     */
+
     function between( x, min, max ){
         return x >= min && x <= max;
     }
+
+    /**
+     *
+     *
+     */
+
+    function showError() {
+        var e1 = document.getElementById("offerLabel");
+        e1.setAttribute("style","display:inline;");
+        e1.setAttribute("aria-invalid","true");
+        e1.innerHTML="&nbsp;<b>ERROR</b> - Please Match the Bidding Price!";
+        document.getElementById("offerNum").setAttribute("aria-invalid", "true");
+    }
+
+    /**
+     *
+     *
+     */
+
+    function showMessage() {
+        var e1 = document.getElementById("offerLabel");
+        e1.setAttribute("style","display:inline;");
+        e1.setAttribute("aria-invalid","true");
+        e1.innerHTML="&nbsp;<b>MESSAGE</b> - Deal!";
+        document.getElementById("offerNum").setAttribute("aria-invalid", "true");
+    }
+
+    /**
+     *
+     *
+     */
 
     function getUrlParameter(name) {
         name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
@@ -22,6 +60,11 @@ var purple = (function (window) {
         return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
     }
 
+
+    /**
+     *
+     *
+     */
 
     //event handlers
     var toggledItem = function() {
@@ -35,50 +78,32 @@ var purple = (function (window) {
         }
     };
 
+
+    /**
+     *
+     *
+     */
+
     //create function that validates the user input
-    var validateOffer = function(){
-        /**
-         * Get the value of a querystring
-         * @param  {String} field The field to get the value of
-         * @param  {String} url   The URL to get the value from (optional)
-         * @return {String}       The field value
-         */
+    var validateOffer = function(ev){
+        //parse the current string offer value to an integer
+        parsedOffer = parseInt(offerNum.value);
 
-        //check the url param value
-        if (getUrlParameter(offer) < 189000){
-            console.log('Off too low.');
-            console.log(getUrlParameter(offer))
-            console.log(getUrlParameter('offerNum'));
+        if (parsedOffer < 180000){
+            showError();
         }else {
-            console.log('Lets pop some champaign!');
+            showMessage();
         }
 
 
-        console.log(getUrlParameter('offerNum'));
-
-
-
-
-
-
-
-       /* if( between( offer, 180000, 200000)){
-            console.log("GOOD PRICE!");
-        }else{
-            console.log("BAD PRICE!");
-        }
-
-        if(offer.length === 0 ){
-            console.log("Please enter a valid input!");
-        }else{
-
-            console.log(offer);
-        }
-
-        console.log("Saving value", offer);*/
-
+        ev.preventDefault();
 
     };
+
+    /**
+     * Function for checking the loading of 'all' dom content
+     *
+     */
 
     var ready = function () {
         console.log('html content fully loaded');
@@ -86,15 +111,23 @@ var purple = (function (window) {
 
 
     //event listeners
-    anchorEl.addEventListener("click", toggledItem, false);
-    submitOffer.addEventListener("click", validateOffer, false);
-    document.addEventListener("DOMContentLoaded", ready);
+    function loadEvents() {
+        anchorEl.addEventListener("click", toggledItem, false);
+        submitOffer.addEventListener("click", validateOffer, false);
+        document.addEventListener("DOMContentLoaded", ready);
+    }
+
+
+    /**
+     *
+     *
+     */
 
     //api dispatcher
     return {
-        toggledItem: toggledItem,
-        validateOffer: validateOffer
+        loadEvents: loadEvents
     }
+
 }(window));
 
 
