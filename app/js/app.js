@@ -6,7 +6,6 @@ var purple = (function (window) {
     //vars
     var anchorEl = document.querySelector("a"),
         targetEl = document.querySelectorAll('.hide')[0],
-        //offer = document.querySelectorAll('input[type="number"]')[0].value,
         submitOffer = document.querySelectorAll('input[type="submit"]')[0],
         parsedOffer;
 
@@ -86,12 +85,21 @@ var purple = (function (window) {
 
     //create function that validates the user input
     var validateOffer = function(ev){
+        //declare the storage object
+        var storage = {};
         //parse the current string offer value to an integer
         parsedOffer = parseInt(offerNum.value);
 
+
         if (parsedOffer < 180000){
+            //store the value
+            storage["offer"] = parsedOffer;
+            console.log(storage);
             showError();
         }else {
+            //store the value
+            storage["offer"] = parsedOffer;
+            console.log(storage);
             showMessage();
         }
 
