@@ -1,0 +1,26 @@
+{
+  "name": "purple_brick",
+  "description": "module_example",
+  "main": "index.html",
+  "authors": [
+    "Robert Yarborough"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/bobby5develops/purple_brick",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "animate.css": "^3.5.2",
+    "bootstrap.native": "^2.0.11"
+  },
+  "devDependencies": {
+    "bootstrap-sass": "bootstrap-sass-official#^3.3.7",
+    "font-awesome": "fontawesome#^4.7.0"
+  }
+}

@@ -2,21 +2,45 @@
 /* ==========================================================================
    Navigation
    ========================================================================== */
+
+/* Imports */
+
+
+
+
 /*  SECTIONS  */
 nav {
     clear: both;
     padding: 0;
     margin: 0;
 
-    ul {
-        height: 104px;
-        margin: 0px;
-        list-style-type: none;
-        padding: 0;
-        overflow: hidden;
-        border-bottom: 1.5px solid rgba(0,0,0, 0.3) ;
-        .navigation_bar{
-            background-color: #f1f2f2;
+    .navbar {
+        position: relative;
+        min-height: $navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
+        margin-bottom: $navbar-margin-bottom;
+        border: 1px solid transparent;
+
+        // Prevent floats from breaking the navbar
+        @include clearfix;
+
+        @media (min-width: $grid-float-breakpoint) {
+            border-radius: $navbar-border-radius;
+        }
+
+        ul {
+            height: 104px;
+            margin: 0px;
+            list-style-type: none;
+            padding: 0;
+            overflow: hidden;
+            border-bottom: 1.5px solid rgba(0,0,0, 0.3) ;
+            .navigation_bar{
+                background-color: #f1f2f2;
+            }
         }
     }
+
 }
+
+
+
